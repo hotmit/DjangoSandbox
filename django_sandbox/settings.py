@@ -1,4 +1,7 @@
 import os
+import pymysql
+pymysql.install_as_MySQLdb()
+
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 SECRET_KEY = 'hcm6=+gle9s(ojvn6gxdxn$gjfm2yt64=14(0$4ng%9h-624k+'
@@ -34,12 +37,26 @@ ROOT_URLCONF = 'django_sandbox.urls'
 WSGI_APPLICATION = 'django_sandbox.wsgi.application'
 
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'django_sandbox',
+        'USER': 'root',
+        'PASSWORD': 'e2HnvYy',
+        'OPTIONS': {
+            'autocommit': True,
+        },
     }
 }
+
+
 
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
