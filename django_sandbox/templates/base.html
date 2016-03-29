@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title|default:'Django Sandbox' }}</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap/css/bootstrap-theme.min.css' %}">
+
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css' %}">
+    <link rel="stylesheet" href="{% static 'vendor/bootstrap-dialog/bootstrap-dialog.css' %}">
+
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    {% block body %}
+        <main>
+            {% block main %}
+            {% endblock %}
+        </main>
+    {% endblock %}
+
+    <script src="{% static 'vendor/jquery/jquery-1.11.3.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.min.js' %}"></script>
+
+    <script src="{% static 'vendor/block-ui/jquery.blockUI.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap-datetimepicker/js/moment-with-locales.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap-dialog/bootstrap-dialog.min.js' %}"></script>
+    <script src="{% static 'vendor/jquery-form/jquery.form.min.js' %}"></script>
+
+    <script src="{% static 'js/main.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load crispy_forms_tags %}
+<head>
+    <meta charset="UTF-8">
+    <title>Django Ajax Form</title>
+</head>
+<body>
+    <div class="dj-ajax-form-result">
+        {% block form_display %}
+            {% crispy form %}
+        {% endblock %}
+
+        {% block form_footer %}
+            {{ form.media }}
+        {% endblock %}
+    </div>
+</body>
+</html>

@@ -1,10 +1,14 @@
 from django.conf.urls import patterns, include, url
-from django.contrib import admin
+from django.conf import settings
+from django.views.static import serve
 
-urlpatterns = patterns('',
-    # Examples:
-    # url(r'^$', 'django_sandbox.views.home', name='home'),
-    # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
-)
+urlpatterns = [
+    url(r'^multi-tuple/', include('django_sandbox.apps.multi_tuple_insert.urls', namespace='multi_tuple'))
+]
+
+
+if settings.DEBUG:
+    urlpatterns += [
+        url(r'^media/(?P<path>.*)$', serve, {'document_root': settings.MEDIA_ROOT})
+    ]
