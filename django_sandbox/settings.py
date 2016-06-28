@@ -7,7 +7,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 SECRET_KEY = 'hcm6=+gle9s(ojvn6gxdxn$gjfm2yt64=14(0$4ng%9h-624k+'
 
 DEBUG = True
-TEMPLATE_DEBUG = True
 ALLOWED_HOSTS = []
 
 INSTALLED_APPS = (
@@ -21,6 +20,7 @@ INSTALLED_APPS = (
     'crispy_forms',
 
     'django_sandbox.apps.multi_tuple_insert',
+    'django_sandbox.apps.multi_keys_filter',
 )
 
 MIDDLEWARE_CLASSES = (
