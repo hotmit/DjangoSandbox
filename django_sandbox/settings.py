@@ -18,6 +18,7 @@ INSTALLED_APPS = (
 
     'crispy_forms',
 
+    'django_sandbox.apps.home',
     'django_sandbox.apps.multi_tuple_insert',
     'django_sandbox.apps.multi_keys_filter',
 )
